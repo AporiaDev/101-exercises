@@ -9,7 +9,6 @@ public class FizzBuzz {
         for (int i = 1; i <= 100; i++){
             list.add(i);
         }
-
         for (int j = 0; j < list.size(); j++){
 
             int valor = (int) list.get(j);
