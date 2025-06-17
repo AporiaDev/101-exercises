@@ -26,16 +26,23 @@ public class Anagrama {
             for (char data : wordTwo.toCharArray()){
                 letterTwo.add(String.valueOf(data));
         }
-        
+        int aux = 0;
         for(int i = 0; i < letter.size(); i++){
             for(int j =0; j < letterTwo.size(); j++){
                 if (letter.get(i).equals(letterTwo.get(j))){
-                    continue;
-                }else{
-                    letter.set(i,false);
+                    aux += 1;
                     break;
+                }else{
+                    continue;
                 }
             }
+        }
+        if (aux == 4){
+            System.out.println(true);
+        }else if(aux < 4){
+            System.out.println(false);
+        }else{
+            System.err.println("Value aux exceeds");
         }
            
         }
